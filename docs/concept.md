@@ -2,7 +2,6 @@
 
 **Temat pracy:** *Implementacja bezpośredniego interfejsu sensor-mikrokontroler dla czujników rezystancyjnych.*
 
----
 
 ## 1. Cel i Założenia Projektu
 
@@ -10,7 +9,6 @@
 - **Cel porównawczy:** Zbadanie wpływu architektury mikrokontrolera (8-bit AVR vs 32-bit ARM Cortex-M) oraz częstotliwości zegara referencyjnego ($T_{ref}$) na rozdzielczość TDC (Time-to-Digital Conversion), szum wyzwalania i błąd kwantyzacji.
 - **Rzetelność badań:** Obydwa mikrokontrolery mierzą **ten sam pojedynczy tor pomiarowy**, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem analogowym i trzymany w stanie sprzętowego RESETu (stan *High-Z* na pinach I/O.
 
----
 
 ## 2. Metodologia i Algorytmy Kalibracji (RC-DIC)
 
@@ -24,7 +22,6 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
 
 > **Wniosek:** Układ do kalibracji 3-punktowej jest nadzbiorem pozostałych metod. Przełączając piny w kodzie programowym, na jednym fizycznym torze pomiarowym realizowane są wszystkie trzy algorytmy.
 
----
 
 ## 3. Architektura Sprzętowa
 
@@ -65,7 +62,6 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
   - **Kanał SCI UART:** Połączony z mikrokontrolerem ATmega328P.
   - **Pin GPIO.0_ECI:** Steruje sygnałem wyboru MUX (`IN1+IN2` w TS3A27518E) oraz sterowaniem linii RESET obu MCU przez diody.
 
----
 
 ## 4. Firmware i Pomiary
 
@@ -75,7 +71,6 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
   3. Po zatrzaśnięciu timera przez moduł *Input Capture* wybudza się, zapisuje surową wartość ($N_x, N_{c1}, N_{c2}$) do bufora w pamięci.
   4. Po wykonaniu zadanej serii pomiarów (np. $K=100$) uruchamia UART i wysyła cały pakiet danych do PC.
 
----
 
 ## 5. Software PC
 
