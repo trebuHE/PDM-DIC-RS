@@ -28,9 +28,9 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
 
 ## 3. Architektura Sprzętowa
 
-### 3.1. Uniwersalny Tor Pomiarowy (5 Linii Sygnałowych)
+### 3.1. Tor Pomiarowy (5 Linii)
 <p align="center">
-  <img src="./calibration_concept.jpg" title="Calibration circuit concept">
+  <img src="./calibration_concept.jpg" title="Calibration circuit concept" width="500" height="600">
 </p>
 
 Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspólny węzeł napięciowy $V_o$ przy kondensatorze $C$:
