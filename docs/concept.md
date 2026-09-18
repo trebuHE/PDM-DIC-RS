@@ -7,7 +7,7 @@
 
 - **Główny cel:** Zbudowanie autorskiego stanowiska pomiarowego do przeprowadzenia metrologicznego porównania trzech algorytmów kalibracji układów DIC (1-, 2- i 3-punktowej).
 - **Cel porównawczy:** Zbadanie wpływu architektury mikrokontrolera (8-bit AVR vs 32-bit ARM Cortex-M) oraz częstotliwości zegara referencyjnego ($T_{ref}$) na rozdzielczość TDC (Time-to-Digital Conversion), szum wyzwalania i błąd kwantyzacji.
-- **Rzetelność badań:** Obydwa mikrokontrolery mierzą **ten sam pojedynczy tor pomiarowy**, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem analogowym i trzymany w stanie sprzętowego RESETu (stan *High-Z* na pinach I/O.
+- **Rzetelność badań:** Obydwa mikrokontrolery mierzą **ten sam pojedynczy tor pomiarowy**, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem analogowym i trzymany w stanie sprzętowego RESETu (stan *High-Z* na pinach I/O).
 
 
 ## 2. Metodologia i Algorytmy Kalibracji (RC-DIC)
@@ -35,7 +35,7 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 2. **Linia `DRV_RX`:** Dołączona do badanego czujnika/rezystora $R_x$.
 3. **Linia `DRV_RC1`:** Dołączona do dolnego rezystora wzorcowego $R_{c1}$ (np. $200\ \Omega$, 0.1%).
 4. **Linia `DRV_RC2`:** Dołączona do górnego rezystora wzorcowego $R_{c2}$ (np. $10\text{ k}\Omega$, 0.1%).
-5. **Linia `DRV_SHORT`:** Dołączona do ścieżki zwarciowej i szeregowego rezystora $R_0$ ograniczającego prądu pinu.
+5. **Linia `DRV_SHORT`:** Dołączona do ścieżki zwarciowej i szeregowego rezystora $R_0$ ograniczającego prąd pinu.
 
 - **Kondensator $C$:** najlepiej typu C0G/NP0 (lub foliowy FKP/MKP) ze względu na niski współczynnik napięciowy i temperaturowy.
 - **Gniazda testowe (footprint hybrydowy):** Pola lutownicze SMD połączone z otworami THT, w które wlutowane będą **złocone gniazda kołkowe (Machined Pins)**. Umożliwia to wygodną wymianę elementów $R_x, C, R_{c1}, R_{c2}, R_0$.
@@ -53,7 +53,15 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
   - Łączy 5 linii toru pomiarowego (`CAP`, `DRV_RX`, `DRV_RC1`, `DRV_RC2`, `DRV_SHORT`) albo z STM32, albo z ATmegą.
 - **Hardware RESET Interlock (Gwarancja High-Z):**
   - Linie `RESET` obu mikrokontrolerów podciągnięte rezystorami $10\text{ k}\Omega$ do $+3.3\text{ V}$.
-  - Połączone poprzez **diody Schottky'ego** z sygnałem sterującym z CP2105. Nieaktywny mikrokontroler jest trzymany w stanie sprzętowego RESETu, wymuszając stan wysokiej impedancji na wszystkich jego pinach I/O, bez blokowania linii programatora (SWD / ISP).
+  - Nieaktywny mikrokontroler jest trzymany w stanie sprzętowego RESETu, wymuszając stan wysokiej impedancji na wszystkich jego pinach I/O, bez blokowania linii programatora (SWD / ISP).
+
+#### 3.3.1. Sterowanie linią RESET
+
+Linia RESET każdego MCU jest sterowana z trzech miejsc: rezystor podciągający 10 kΩ, GPIO mostka CP2105 i złącze programatora (SWD/ISP). Wyjście CP2105 musi więc być odporne na konflikt z programatorem ściągającym linię do masy.
+
+**Preferowany wariant:** GPIO CP2105 w trybie open-drain — stan „HIGH” = Hi-Z (linię trzyma 10 kΩ), stan „LOW” = twarde 0 V; programator zawsze może sterować linią bez konfliktu. Wymaga jednorazowej konfiguracji OTP układu (Xpress Configurator / AN721) — wykonywanej na docelowej PCB, przez zwykłe USB; wymogi sprzętowe to kondensator na pinie VPP do GND i fabryczny VID/PID (0x10C4:0xEA70), by sterownik VCP nadal rozpoznawał układ.
+
+**Wariant zapasowy:** dioda Schottky'ego między CP2105 a linią RESET — bez OTP, kosztem poziomu „w resecie” ~0,3 V ($V_F$) zależnego od egzemplarza. W obu wariantach RESET nie chroni toru pomiarowego — tę rolę pełni wyłącznie klucz analogowy i wymuszony stan High-Z nieaktywnego MCU.
 
 ### 3.4. Zasilanie i Komunikacja USB
 - **Zasilanie:** Pobierane z $V_{BUS}$ USB ($5\text{ V}$), stabilizowane przez niskoszumowy regulator LDO na **$3.3\text{ V}$** (np. `MCP1700-3302E` / `AP7361C`) z pojemnościami odsprzęgającymi $100\text{ nF} + 10\ \mu\text{F}$ przy każdym układzie scalonym.
@@ -74,6 +82,6 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 
 ## 5. Software PC
 
-- **Architektura:** skrypt w Pythonie, który zarządza cała sekwencją pomiarową, zapisuje i przetwarza odebrane dane.
+- **Architektura:** skrypt w Pythonie, który zarządza całą sekwencją pomiarową, zapisuje i przetwarza odebrane dane.
 - **Automatyzacja pomiarów:** przy pomocy mostka CP2105 skrypt wybiera aktywny mikrokontroler i zleca mu pomiary, odbiera i zapisuje dane.
 - **Przetwarzanie danych:** skrypt odbiera zawsze surowe dane i sam dokonuje obliczeń.
