@@ -24,7 +24,91 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
 
 ## 3. Architektura Sprzętowa
 
-### 3.1. Tor Pomiarowy (5 Linii)
+### 3.1. Diagram blokowy
+
+```mermaid
+  flowchart TB
+  subgraph InterfaceSection["Mostek USB, Zasilanie i Układ Reset"]
+          LDO["LDO AP7361C\n(5V USB ➔ 3.3V)"]
+          CP2105["Mostek Dual-UART CP2105\n(VIO zasilane z 3.3V LDO)"]
+          RST_STM["Reset STM32\n(Dioda Schottky BAT54 + Pull-up 10k)"]
+          RST_AVR["Reset AVR\n(Dioda Schottky BAT54 + Pull-up 10k)"]
+          MUX_JUMP{"Wybór MUX_SEL\n(Zworka: RTS vs GPIO)"}
+    end
+  subgraph MCUSection["Badane MCU"]
+          STM32["STM32L073RZ\n• Taktowanie: 32 MHz (Tref = 31.25 ns)\n• Wejście pomiarowe: TIM_CH1 (Input Capture)\n• Tryb pomiarowy: Sleep Mode"]
+          AVR["ATmega328P\n• Taktowanie: 8 MHz Kwarc (Tref = 125 ns)\n• Pomiar: wejście ICP1 (input capture)\n• Tryb pomiarowy: Idle Mode"]
+    end
+  subgraph Branches["Gałęzie Rozładowujące"]
+          RX["Rezystor Badany Rx\n(Czujnik rezystancyjny)"]
+          RC1["Wzorzec Rc1\n(Dolny: 200 Ω, 0.1%)"]
+          RC2["Wzorzec Rc2\n(Górny: 10 kΩ, 0.1%)"]
+          SHORT["Ścieżka zwarciowa\n(R = 0 Ω)"]
+    end
+  subgraph CircuitSection["Wspólny Tor Pomiarowy"]
+      direction TB
+          Branches
+          SUM_NODE(("Wspólny węzeł magistrali"))
+          R0["Rezystor szeregowy R0\n(100 Ω, 0.1%)"]
+          VO_NODE(("Węzeł pomiarowy Vo"))
+          CAP_C["Kondensator pomiarowy C\n(C0G/NP0 10–22 nF)"]
+          GND["Masa Układu GND"]
+    end
+      PC["Stanowisko PC (aplikacja pomiarowa)"] <-- Kabel USB (Dane + 5V) --> InterfaceSection
+      LDO -. "Szyna zasilania 3.3V" .-> CP2105
+      CP2105 -- "Pin 15 (DTR / GPIO.0)" --> RST_STM
+      CP2105 -- "Pin 23 (DTR / GPIO.1)" --> RST_AVR
+      CP2105 -- Pin 11 (RTS) / Pin 14 (GPIO) --> MUX_JUMP
+      CP2105 <-- UART ECI (TXD/RXD) --> STM32
+      CP2105 <-- UART SCI (TXD/RXD) --> AVR
+      RST_STM -- "NRST (Wymuszenie High-Z)" --> STM32
+      RST_AVR -- "RESET (Wymuszenie High-Z)" --> AVR
+      MUX_JUMP -- Sygnał MUX_SEL --> MUX["Klucz Analogowy 6-kanałowy 1:2 (TS3A27518E)\n• Ron ≈ 4.4 Ω, Izolacja linii I/O nieaktywnego MCU"]
+      STM32 == 5 linii I/O (TIM_CH1 + 4x GPIO DRV) ==> MUX
+      AVR == 5 linii I/O (ICP1 + 4x GPIO DRV) ==> MUX
+      RX --- SUM_NODE
+      RC1 --- SUM_NODE
+      RC2 --- SUM_NODE
+      SHORT --- SUM_NODE
+      SUM_NODE -- Prąd rozładowania --> R0
+      R0 --> VO_NODE
+      VO_NODE --- CAP_C
+      CAP_C --- GND
+      MUX -- DRV_RX --> RX
+      MUX -- DRV_RC1 --> RC1
+      MUX -- DRV_RC2 --> RC2
+      MUX -- DRV_SHORT --> SHORT
+      MUX == CAP (Bezpośredni odczyt napięcia Vo) ==> VO_NODE
+
+      LDO:::pwrStyle
+      CP2105:::commStyle
+      RST_STM:::rstStyle
+      RST_AVR:::rstStyle
+      MUX_JUMP:::commStyle
+      STM32:::mcuStyle
+      AVR:::mcuStyle
+      RX:::circuitStyle
+      RC1:::circuitStyle
+      RC2:::circuitStyle
+      SHORT:::circuitStyle
+      SUM_NODE:::nodeStyle
+      R0:::circuitStyle
+      VO_NODE:::nodeStyle
+      CAP_C:::circuitStyle
+      GND:::pwrStyle
+      PC:::pcStyle
+      MUX:::muxStyle
+      classDef pcStyle fill:#eef2f6,stroke:#334155,stroke-width:1.5px,color:#0f172a
+      classDef pwrStyle fill:#fef2f2,stroke:#dc2626,stroke-width:1.5px,color:#991b1b
+      classDef commStyle fill:#eff6ff,stroke:#2563eb,stroke-width:1.5px,color:#1e40af
+      classDef rstStyle fill:#fdf4ff,stroke:#c026d3,stroke-width:1.5px,color:#86198f
+      classDef mcuStyle fill:#f0fdf4,stroke:#16a34a,stroke-width:1.5px,color:#166534
+      classDef muxStyle fill:#fffbeb,stroke:#d97706,stroke-width:1.5px,color:#92400e
+      classDef circuitStyle fill:#faf5ff,stroke:#7c3aed,stroke-width:1.5px,color:#5b21b6
+      classDef nodeStyle fill:#ffffff,stroke:#475569,stroke-width:2px,color:#0f172a
+```
+
+### 3.2. Tor Pomiarowy (5 Linii)
 
 ![Calibration circuit concept](./calibration_concept.jpg)
 
@@ -39,7 +123,7 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 - **Kondensator $C$:** najlepiej typu C0G/NP0 (lub foliowy FKP/MKP) ze względu na niski współczynnik napięciowy i temperaturowy.
 - **Gniazda testowe (footprint hybrydowy):** Pola lutownicze SMD połączone z otworami THT, w które wlutowane będą **złocone gniazda kołkowe (Machined Pins)**. Umożliwia to wygodną wymianę elementów $R_x, C, R_{c1}, R_{c2}, R_0$.
 
-### 3.2. Mikrokontrolery Testowe
+### 3.3. Mikrokontrolery Testowe
 
 - **MCU A (8-bit AVR): ATmega328P-AU**
   - Zasilanie: $3.3\text{ V}$, Zegar: $8\text{ MHz}$ kwarcowy ($T_{ref} = 125\text{ ns}$).
@@ -48,7 +132,7 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
   - Zasilanie: $3.3\text{ V}$, Zegar: $32\text{ MHz}$ ($T_{ref} = 31.25\text{ ns}$).
   - Interfejs TDC: Timery 16-bit z modułem *Input Capture* i optymalizacją pod niski pobór energii (*Stop/Sleep Mode*).
 
-### 3.3. Klucz Analogowy i Izolacja Sprzętowa
+### 3.4. Klucz Analogowy i Izolacja Sprzętowa
 
 - **Scalony Przełącznik:** **TS3A27518E** (6-kanałowy przełącznik 1:2, $r_{on} \approx 4.4\ \Omega$).
   - Łączy 5 linii toru pomiarowego (`CAP`, `DRV_RX`, `DRV_RC1`, `DRV_RC2`, `DRV_SHORT`) albo z STM32, albo z ATmegą.
@@ -60,7 +144,7 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
   - Linia `RESET` mikrokontrolera AVR podłączona jest do **pinu 23 CP2105** (`GPIO.1_SCI` / `DTR_SCI`).
   - Nieaktywny mikrokontroler jest trzymany w stanie sprzętowego RESETu, co wymusza stan wysokiej impedancji na wszystkich jego pinach I/O i eliminuje wpływ na wspólny tor pomiarowy.
 
-### 3.4. Zasilanie i Komunikacja USB
+### 3.5. Zasilanie i Komunikacja USB
 
 - **Zasilanie:** Pobierane z $V_{BUS}$ USB ($5\text{ V}$), stabilizowane przez niskoszumowy regulator LDO na **$3.3\text{ V}$** (np. `MCP1700-3302E` / `AP7361C`) z pojemnościami odsprzęgającymi $100\text{ nF} + 10\ \mu\text{F}$ przy każdym układzie scalonym.
 - **Mostek USB:** **CP2105** (Silicon Labs, obudowa QFN-24):
