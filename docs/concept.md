@@ -33,19 +33,19 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
         CP2105["Mostek Dual-UART CP2105\n(VIO zasilane z 3.3V LDO)"]:::commStyle
         RST_STM["Reset STM32\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
         RST_AVR["Reset AVR\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
-        MUX_JUMP{"Wybór MUX_SEL\n(Zworka: RTS vs GPIO)"}:::commStyle
+        MUX_JUMP{"Wybór MUX_SEL"}:::commStyle
     end
 
     subgraph MCUSection["Badane MCU"]
-        STM32["STM32L073RZ\n• Taktowanie: 32 MHz (Tref = 31.25 ns)\n• Wejście pomiarowe: TIM_CH1 (Input Capture)\n• Tryb pomiarowy: Sleep Mode"]:::mcuStyle
-        AVR["ATmega328P\n• Taktowanie: 8 MHz Kwarc (Tref = 125 ns)\n• Pomiar: wejście ICP1 (input capture)\n• Tryb pomiarowy: Idle Mode"]:::mcuStyle
+        STM32["STM32L073RZ"]:::mcuStyle
+        AVR["ATmega328P"]:::mcuStyle
     end
 
-    MUX["Klucz Analogowy 6-kanałowy 1:2 (TS3A27518E)\n• Ron ≈ 4.4 Ω, Izolacja linii I/O nieaktywnego MCU"]:::muxStyle
+    MUX["Klucz Analogowy 6-kanałowy 1:2 (TS3A27518E)"]:::muxStyle
 
     subgraph CircuitSection["Wspólny Tor Pomiarowy"]
         direction TB
-        RX["Rezystor Badany Rx\n(Czujnik rezystancyjny)"]:::circuitStyle
+        RX["Rezystor Badany Rx"]:::circuitStyle
         RC1["Wzorzec Rc1\n(Dolny: 200 Ω, 0.1%)"]:::circuitStyle
         RC2["Wzorzec Rc2\n(Górny: 10 kΩ, 0.1%)"]:::circuitStyle
         SHORT["Ścieżka zwarciowa\n(R = 0 Ω)"]:::circuitStyle
@@ -68,8 +68,8 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
     CP2105 <-->|"UART ECI (TXD/RXD)"| STM32
     CP2105 <-->|"UART SCI (TXD/RXD)"| AVR
 
-    RST_STM -->|"NRST (Wymuszenie High-Z)"| STM32
-    RST_AVR -->|"RESET (Wymuszenie High-Z)"| AVR
+    RST_STM -->|"NRST"| STM32
+    RST_AVR -->|"RESET"| AVR
 
     MUX_JUMP -->|"Sygnał MUX_SEL"| MUX
     STM32 ==>|"5 linii I/O (TIM_CH1 + 4x GPIO DRV)"| MUX
@@ -89,7 +89,7 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
     MUX -->|"DRV_RC1"| RC1
     MUX -->|"DRV_RC2"| RC2
     MUX -->|"DRV_SHORT"| SHORT
-    MUX ==>|"CAP (Bezpośredni odczyt Vo)"| VO_NODE
+    MUX ==>|"CAP"| VO_NODE
 
     classDef pcStyle stroke:#64748b,stroke-width:2px;
     classDef pwrStyle stroke:#ef4444,stroke-width:2px;
