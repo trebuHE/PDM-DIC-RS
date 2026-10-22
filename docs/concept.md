@@ -28,77 +28,70 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
 
 ```mermaid
   flowchart TB
-  subgraph InterfaceSection["Mostek USB, Zasilanie i Układ Reset"]
-          LDO["LDO AP7361C\n(5V USB ➔ 3.3V)"]
-          CP2105["Mostek Dual-UART CP2105\n(VIO zasilane z 3.3V LDO)"]
-          RST_STM["Reset STM32\n(Dioda Schottky BAT54 + Pull-up 10k)"]
-          RST_AVR["Reset AVR\n(Dioda Schottky BAT54 + Pull-up 10k)"]
-          MUX_JUMP{"Wybór MUX_SEL\n(Zworka: RTS vs GPIO)"}
+    subgraph InterfaceSection["Mostek USB, Zasilanie i Układ Reset"]
+        LDO["LDO AP7361C\n(5V USB ➔ 3.3V)"]:::pwrStyle
+        CP2105["Mostek Dual-UART CP2105\n(VIO zasilane z 3.3V LDO)"]:::commStyle
+        RST_STM["Reset STM32\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
+        RST_AVR["Reset AVR\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
+        MUX_JUMP{"Wybór MUX_SEL\n(Zworka: RTS vs GPIO)"}:::commStyle
     end
-  subgraph MCUSection["Badane MCU"]
-          STM32["STM32L073RZ\n• Taktowanie: 32 MHz (Tref = 31.25 ns)\n• Wejście pomiarowe: TIM_CH1 (Input Capture)\n• Tryb pomiarowy: Sleep Mode"]
-          AVR["ATmega328P\n• Taktowanie: 8 MHz Kwarc (Tref = 125 ns)\n• Pomiar: wejście ICP1 (input capture)\n• Tryb pomiarowy: Idle Mode"]
-    end
-  subgraph Branches["Gałęzie Rozładowujące"]
-          RX["Rezystor Badany Rx\n(Czujnik rezystancyjny)"]
-          RC1["Wzorzec Rc1\n(Dolny: 200 Ω, 0.1%)"]
-          RC2["Wzorzec Rc2\n(Górny: 10 kΩ, 0.1%)"]
-          SHORT["Ścieżka zwarciowa\n(R = 0 Ω)"]
-    end
-  subgraph CircuitSection["Wspólny Tor Pomiarowy"]
-      direction TB
-          Branches
-          SUM_NODE(("Wspólny węzeł magistrali"))
-          R0["Rezystor szeregowy R0\n(100 Ω, 0.1%)"]
-          VO_NODE(("Węzeł pomiarowy Vo"))
-          CAP_C["Kondensator pomiarowy C\n(C0G/NP0 10–22 nF)"]
-          GND["Masa Układu GND"]
-    end
-      PC["Stanowisko PC (aplikacja pomiarowa)"] <-- Kabel USB (Dane + 5V) --> InterfaceSection
-      LDO -. "Szyna zasilania 3.3V" .-> CP2105
-      CP2105 -- "Pin 15 (DTR / GPIO.0)" --> RST_STM
-      CP2105 -- "Pin 23 (DTR / GPIO.1)" --> RST_AVR
-      CP2105 -- Pin 11 (RTS) / Pin 14 (GPIO) --> MUX_JUMP
-      CP2105 <-- UART ECI (TXD/RXD) --> STM32
-      CP2105 <-- UART SCI (TXD/RXD) --> AVR
-      RST_STM -- "NRST (Wymuszenie High-Z)" --> STM32
-      RST_AVR -- "RESET (Wymuszenie High-Z)" --> AVR
-      MUX_JUMP -- Sygnał MUX_SEL --> MUX["Klucz Analogowy 6-kanałowy 1:2 (TS3A27518E)\n• Ron ≈ 4.4 Ω, Izolacja linii I/O nieaktywnego MCU"]
-      STM32 == 5 linii I/O (TIM_CH1 + 4x GPIO DRV) ==> MUX
-      AVR == 5 linii I/O (ICP1 + 4x GPIO DRV) ==> MUX
-      RX --- SUM_NODE
-      RC1 --- SUM_NODE
-      RC2 --- SUM_NODE
-      SHORT --- SUM_NODE
-      SUM_NODE -- Prąd rozładowania --> R0
-      R0 --> VO_NODE
-      VO_NODE --- CAP_C
-      CAP_C --- GND
-      MUX -- DRV_RX --> RX
-      MUX -- DRV_RC1 --> RC1
-      MUX -- DRV_RC2 --> RC2
-      MUX -- DRV_SHORT --> SHORT
-      MUX == CAP (Bezpośredni odczyt napięcia Vo) ==> VO_NODE
 
-      LDO:::pwrStyle
-      CP2105:::commStyle
-      RST_STM:::rstStyle
-      RST_AVR:::rstStyle
-      MUX_JUMP:::commStyle
-      STM32:::mcuStyle
-      AVR:::mcuStyle
-      RX:::circuitStyle
-      RC1:::circuitStyle
-      RC2:::circuitStyle
-      SHORT:::circuitStyle
-      SUM_NODE:::nodeStyle
-      R0:::circuitStyle
-      VO_NODE:::nodeStyle
-      CAP_C:::circuitStyle
-      GND:::pwrStyle
-      PC:::pcStyle
-      MUX:::muxStyle
-      classDef pcStyle stroke:#64748b,stroke-width:2px;
+    subgraph MCUSection["Badane MCU"]
+        STM32["STM32L073RZ\n• Taktowanie: 32 MHz (Tref = 31.25 ns)\n• Wejście pomiarowe: TIM_CH1 (Input Capture)\n• Tryb pomiarowy: Sleep Mode"]:::mcuStyle
+        AVR["ATmega328P\n• Taktowanie: 8 MHz Kwarc (Tref = 125 ns)\n• Pomiar: wejście ICP1 (input capture)\n• Tryb pomiarowy: Idle Mode"]:::mcuStyle
+    end
+
+    MUX["Klucz Analogowy 6-kanałowy 1:2 (TS3A27518E)\n• Ron ≈ 4.4 Ω, Izolacja linii I/O nieaktywnego MCU"]:::muxStyle
+
+    subgraph CircuitSection["Wspólny Tor Pomiarowy"]
+        direction TB
+        RX["Rezystor Badany Rx\n(Czujnik rezystancyjny)"]:::circuitStyle
+        RC1["Wzorzec Rc1\n(Dolny: 200 Ω, 0.1%)"]:::circuitStyle
+        RC2["Wzorzec Rc2\n(Górny: 10 kΩ, 0.1%)"]:::circuitStyle
+        SHORT["Ścieżka zwarciowa\n(R = 0 Ω)"]:::circuitStyle
+
+        SUM_NODE["Wspólny węzeł magistrali"]:::nodeStyle
+        R0["Rezystor szeregowy R0\n(100 Ω, 0.1%)"]:::circuitStyle
+        VO_NODE["Węzeł pomiarowy Vo"]:::nodeStyle
+        CAP_C["Kondensator pomiarowy C\n(C0G/NP0 10–22 nF)"]:::circuitStyle
+        GND["Masa Układu GND"]:::pwrStyle
+    end
+
+    PC["Stanowisko PC (aplikacja pomiarowa)"]:::pcStyle
+    PC <-->|"Kabel USB (Dane + 5V)"| InterfaceSection
+    LDO -.->|"Szyna zasilania 3.3V"| CP2105
+    
+    CP2105 -->|"Pin 15 (DTR / GPIO.0)"| RST_STM
+    CP2105 -->|"Pin 23 (DTR / GPIO.1)"| RST_AVR
+    CP2105 -->|"Pin 11 (RTS) / Pin 14 (GPIO)"| MUX_JUMP
+
+    CP2105 <-->|"UART ECI (TXD/RXD)"| STM32
+    CP2105 <-->|"UART SCI (TXD/RXD)"| AVR
+
+    RST_STM -->|"NRST (Wymuszenie High-Z)"| STM32
+    RST_AVR -->|"RESET (Wymuszenie High-Z)"| AVR
+
+    MUX_JUMP -->|"Sygnał MUX_SEL"| MUX
+    STM32 ==>|"5 linii I/O (TIM_CH1 + 4x GPIO DRV)"| MUX
+    AVR ==>|"5 linii I/O (ICP1 + 4x GPIO DRV)"| MUX
+
+    RX --- SUM_NODE
+    RC1 --- SUM_NODE
+    RC2 --- SUM_NODE
+    SHORT --- SUM_NODE
+
+    SUM_NODE -->|"Prąd rozładowania"| R0
+    R0 --> VO_NODE
+    VO_NODE --- CAP_C
+    CAP_C --- GND
+
+    MUX -->|"DRV_RX"| RX
+    MUX -->|"DRV_RC1"| RC1
+    MUX -->|"DRV_RC2"| RC2
+    MUX -->|"DRV_SHORT"| SHORT
+    MUX ==>|"CAP (Bezpośredni odczyt Vo)"| VO_NODE
+
+    classDef pcStyle stroke:#64748b,stroke-width:2px;
     classDef pwrStyle stroke:#ef4444,stroke-width:2px;
     classDef commStyle stroke:#3b82f6,stroke-width:2px;
     classDef rstStyle stroke:#d946ef,stroke-width:2px;
