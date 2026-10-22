@@ -46,15 +46,15 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
     subgraph CircuitSection["Wspólny Tor Pomiarowy"]
         direction TB
         RX["Rezystor Badany Rx"]:::circuitStyle
-        RC1["Wzorzec Rc1\n(Dolny: 200 Ω, 0.1%)"]:::circuitStyle
-        RC2["Wzorzec Rc2\n(Górny: 10 kΩ, 0.1%)"]:::circuitStyle
-        SHORT["Ścieżka zwarciowa\n(R = 0 Ω)"]:::circuitStyle
+        RC1["Wzorzec Rc1"]:::circuitStyle
+        RC2["Wzorzec Rc2"]:::circuitStyle
+        SHORT["Ścieżka zwarciowa"]:::circuitStyle
 
         SUM_NODE["Wspólny węzeł magistrali"]:::nodeStyle
-        R0["Rezystor szeregowy R0\n(100 Ω, 0.1%)"]:::circuitStyle
+        R0["Rezystor szeregowy R0"]:::circuitStyle
         VO_NODE["Węzeł pomiarowy Vo"]:::nodeStyle
-        CAP_C["Kondensator pomiarowy C\n(C0G/NP0 10–22 nF)"]:::circuitStyle
-        GND["Masa Układu GND"]:::pwrStyle
+        CAP_C["Kondensator pomiarowy C"]:::circuitStyle
+        GND["GND"]:::pwrStyle
     end
 
     PC["Stanowisko PC (aplikacja pomiarowa)"]:::pcStyle
