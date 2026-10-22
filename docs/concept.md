@@ -98,14 +98,14 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
       GND:::pwrStyle
       PC:::pcStyle
       MUX:::muxStyle
-      classDef pcStyle fill:#eef2f6,stroke:#334155,stroke-width:1.5px,color:#0f172a
-      classDef pwrStyle fill:#fef2f2,stroke:#dc2626,stroke-width:1.5px,color:#991b1b
-      classDef commStyle fill:#eff6ff,stroke:#2563eb,stroke-width:1.5px,color:#1e40af
-      classDef rstStyle fill:#fdf4ff,stroke:#c026d3,stroke-width:1.5px,color:#86198f
-      classDef mcuStyle fill:#f0fdf4,stroke:#16a34a,stroke-width:1.5px,color:#166534
-      classDef muxStyle fill:#fffbeb,stroke:#d97706,stroke-width:1.5px,color:#92400e
-      classDef circuitStyle fill:#faf5ff,stroke:#7c3aed,stroke-width:1.5px,color:#5b21b6
-      classDef nodeStyle fill:#ffffff,stroke:#475569,stroke-width:2px,color:#0f172a
+      classDef pcStyle stroke:#64748b,stroke-width:2px;
+    classDef pwrStyle stroke:#ef4444,stroke-width:2px;
+    classDef commStyle stroke:#3b82f6,stroke-width:2px;
+    classDef rstStyle stroke:#d946ef,stroke-width:2px;
+    classDef mcuStyle stroke:#22c55e,stroke-width:2px;
+    classDef muxStyle stroke:#f59e0b,stroke-width:2px;
+    classDef circuitStyle stroke:#a855f7,stroke-width:2px;
+    classDef nodeStyle stroke:#94a3b8,stroke-width:2px;
 ```
 
 ### 3.2. Tor Pomiarowy (5 Linii)
