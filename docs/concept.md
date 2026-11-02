@@ -5,10 +5,8 @@
 ## 1. Cel i Założenia Projektu
 
 - **Główny cel:** Zbudowanie autorskiego stanowiska pomiarowego do przeprowadzenia metrologicznego porównania trzech algorytmów kalibracji układów DIC (1-, 2- i 3-punktowej).
-- **Cel porównawczy:** Zbadanie wpływu architektury mikrokontrolera (8-bit AVR vs 32-bit ARM Cortex-M) oraz częstotliwości zegara referencyjnego ($T_{ref}$) na rozdzielczość TDC (Time-to-Digital Conversion), szum wyzwalania i błąd kwantyzacji.
-- **Rzetelność badań:** Obydwa mikrokontrolery mierzą **ten sam pojedynczy tor pomiarowy**, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem analogowym i trzymany w stanie sprzętowego RESETu (stan *High-Z* na pinach I/O).
-
-- **Rzetelność badań:** Obydwa mikrokontrolery mierzą **ten sam pojedynczy tor pomiarowy**, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem analogowym i trzymany w stanie sprzętowego RESETu (stan *High-Z* na pinach I/O).
+- **Cel porównawczy:** Zbadanie wpływu architektury mikrokontrolera (8-bit AVR vs 32-bit ARM Cortex-M) oraz częstotliwości zegara referencyjnego ($T_{ref}$) na rozdzielczość pomiarów i szum kwantyzacji.
+- **Rzetelność badań:** Obydwa mikrokontrolery mierzą ten sam tor pomiarowy, a mikrokontroler nieaktywny jest galwanicznie odcinany kluczem i trzymany w stanie sprzętowego RESETu.
 
 ## 2. Metodologia i Algorytmy Kalibracji (RC-DIC)
 
@@ -29,7 +27,7 @@ Pomiar w układzie DIC polega na wyznaczeniu czasu rozładowania kondensatora $C
 ```mermaid
   flowchart TB
     subgraph InterfaceSection["Mostek USB, Zasilanie i Układ Reset"]
-        LDO["LDO AP7361C\n(5V USB ➔ 3.3V)"]:::pwrStyle
+        LDO["LDO \n(5V USB ➔ 3.3V)"]:::pwrStyle
         CP2105["Mostek Dual-UART CP2105\n(VIO zasilane z 3.3V LDO)"]:::commStyle
         RST_STM["Reset STM32\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
         RST_AVR["Reset AVR\n(Dioda Schottky BAT54 + Pull-up 10k)"]:::rstStyle
@@ -119,11 +117,11 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 ### 3.3. Mikrokontrolery Testowe
 
 - **MCU A (8-bit AVR): ATmega328P-AU**
-  - Zasilanie: $3.3\text{ V}$, Zegar: $8\text{ MHz}$ kwarcowy ($T_{ref} = 125\text{ ns}$).
+  - Zasilanie: $3.3\text{ V}$, Zegar: $8\text{ MHz}$ ($T_{ref} = 125\text{ ns}$).
   - Interfejs TDC: Sprzętowy moduł *Input Capture* na pinie `ICP1`.
 - **MCU B (32-bit ARM): STM32L073RZ (LQFP-64)**
   - Zasilanie: $3.3\text{ V}$, Zegar: $32\text{ MHz}$ ($T_{ref} = 31.25\text{ ns}$).
-  - Interfejs TDC: Timery 16-bit z modułem *Input Capture* i optymalizacją pod niski pobór energii (*Stop/Sleep Mode*).
+  - Interfejs TDC: Timery 16-bit z modułem *Input Capture*.
 
 ### 3.4. Klucz Analogowy i Izolacja Sprzętowa
 
@@ -139,11 +137,11 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 
 ### 3.5. Zasilanie i Komunikacja USB
 
-- **Zasilanie:** Pobierane z $V_{BUS}$ USB ($5\text{ V}$), stabilizowane przez niskoszumowy regulator LDO na **$3.3\text{ V}$** (np. `MCP1700-3302E` / `AP7361C`) z pojemnościami odsprzęgającymi $100\text{ nF} + 10\ \mu\text{F}$ przy każdym układzie scalonym.
+- **Zasilanie:** Pobierane z $V_{BUS}$ USB ($5\text{ V}$), stabilizowane przez niskoszumowy regulator LDO na **$3.3\text{ V}$** (np. `MCP1700-3302E` / `AP7361C`) z pojemnościami odsprzęgającymi przy każdym układzie scalonym.
 - **Mostek USB:** **CP2105** (Silicon Labs, obudowa QFN-24):
   - **Kanał ECI UART:** Połączony z mikrokontrolerem STM32L073RZ.
   - **Kanał SCI UART:** Połączony z mikrokontrolerem ATmega328P.
-- **Dualna architektura sterowania Resetem i Kluczem (Podstawowa / Backup):**
+- **Architektura sterowania resetem i kluczem:**
   - Układ PCB można zaprojektować tak, aby umożliwić dwie wymienne metody kontroli bez modyfikacji ścieżek:
     1. **Opcja Podstawowa (linie modemowe UART):**
        - Linie `DTR_ECI` (pin 15) oraz `DTR_SCI` (pin 23) sterują resetami mikrokontrolerów z poziomu standardowej biblioteki portu szeregowego (PySerial: `ser.dtr`).
