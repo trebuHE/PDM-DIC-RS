@@ -127,7 +127,7 @@ Tor pomiarowy składa się z 5 fizycznych ścieżek połączonych w jeden wspól
 
 - **Scalony Przełącznik:** **TS3A27518E** (6-kanałowy przełącznik 1:2, $r_{on} \approx 4.4\ \Omega$).
   - Łączy 5 linii toru pomiarowego (`CAP`, `DRV_RX`, `DRV_RC1`, `DRV_RC2`, `DRV_SHORT`) albo z STM32, albo z ATmegą.
-  - Wejście wyboru `IN1+IN2` posiada rezystor pull-down $10\text{ k}\Omega$ do masy (wymusza domyślny, zdefiniowany stan szyny pomiarowej).
+  - Wejście wyboru `IN1+IN2` posiada rezystor pull-up $10\text{ k}\Omega$ do $+3.3\text{ V}$ wymuszający stan domyślny.
 - **Hardware RESET:**
   - Linie RESET obu mikrokontrolerów są niezależnie podciągnięte rezystorami $10\text{ k}\Omega$ do $+3.3\text{ V}$.
   - Połączenie z mostkiem CP2105 przez **diody Schottky'ego (BAT54)** (katody skierowane w stronę CP2105, anody do linii RESET MCU). Zapewnia to bezkonfliktowe ściąganie linii do masy przy jednoczesnym braku kolizji z zewnętrznymi programatorami.
