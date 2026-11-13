@@ -2,8 +2,14 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid 032074fe-64bc-4981-b17a-2ff99c40cf9b)
+	(uuid "032074fe-64bc-4981-b17a-2ff99c40cf9b")
 	(paper "A4")
+	(title_block
+		(title "ATmega 328P RC DIC")
+		(date "2026-11-13")
+		(rev "0.1")
+		(company "Hubert Mucha, Politechnika Gdańska")
+	)
 	(lib_symbols)
 	(sheet_instances
 		(path "/"
