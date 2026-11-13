@@ -611,7 +611,12 @@
     },
     "net_colors": {},
     "netclass_assignments": {},
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "GND",
+        "pattern": "GND*"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -754,7 +759,7 @@
         "uuid": "032074fe-64bc-4981-b17a-2ff99c40cf9b"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#FLG1-2,#PWR1-6,C1-2,F1,FB1,J1,R1-2,TP1",
     "variants": []
   },
   "sheets": [
