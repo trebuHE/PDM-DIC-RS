@@ -1363,6 +1363,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:L"
 			(pin_numbers
 				(hide yes)
@@ -3704,6 +3870,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+5V"
 			(power global)
 			(pin_numbers
@@ -4099,6 +4429,18 @@
 		(uuid "5813016a-f501-4076-97ec-46ec0bc5d9a4")
 	)
 	(rectangle
+		(start 309.88 132.08)
+		(end 354.33 185.42)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "bb5df311-ce68-4c68-80c1-72192742ff14")
+	)
+	(rectangle
 		(start 172.72 25.4)
 		(end 251.46 91.44)
 		(stroke
@@ -4121,6 +4463,18 @@
 			(type none)
 		)
 		(uuid "c431c8f4-62b7-4367-9a6f-38f1010ddbc0")
+	)
+	(text "RESET"
+		(exclude_from_sim no)
+		(at 332.232 181.356 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "3339bdfe-9834-48a6-b1c4-2956ce7548f3")
 	)
 	(text "ISP connector"
 		(exclude_from_sim no)
@@ -4189,6 +4543,18 @@
 		(uuid "3faec2fd-b0b6-4bd2-afa2-6c719a1894cf")
 	)
 	(junction
+		(at 336.55 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42c431c8-b0d3-48f5-be18-4c8b938a49cf")
+	)
+	(junction
+		(at 326.39 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4993a487-82cb-41e7-a96a-5f359c017473")
+	)
+	(junction
 		(at 109.22 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4229,6 +4595,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b38dfdfc-9fc6-4235-8d40-b40f8925a84a")
+	)
+	(junction
+		(at 331.47 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d550492b-01a7-4e75-9bd8-0bafa2e18609")
 	)
 	(junction
 		(at 58.42 52.07)
@@ -4279,6 +4651,16 @@
 	(no_connect
 		(at 208.28 40.64)
 		(uuid "a172f411-5f04-4f1c-8eb7-1b5833373bbb")
+	)
+	(wire
+		(pts
+			(xy 326.39 151.13) (xy 326.39 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00735912-df70-4045-92b7-da4fc4e770f7")
 	)
 	(wire
 		(pts
@@ -4632,6 +5014,16 @@
 	)
 	(wire
 		(pts
+			(xy 323.85 151.13) (xy 326.39 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ebca68d-d077-452b-88cd-d3146cb52932")
+	)
+	(wire
+		(pts
 			(xy 232.41 53.34) (xy 232.41 54.61)
 		)
 		(stroke
@@ -4669,6 +5061,16 @@
 			(type default)
 		)
 		(uuid "53d39903-793e-4158-b779-2ed7dc9ba41b")
+	)
+	(wire
+		(pts
+			(xy 336.55 142.24) (xy 336.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5518a11d-cce3-4156-b7d8-cf8432ec4e7f")
 	)
 	(wire
 		(pts
@@ -4729,6 +5131,16 @@
 			(type default)
 		)
 		(uuid "5ff97328-88c3-4d6c-a70f-192385912af6")
+	)
+	(wire
+		(pts
+			(xy 325.12 162.56) (xy 326.39 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "600aec54-0d9c-40e5-a7dd-2d9856129f0b")
 	)
 	(wire
 		(pts
@@ -4839,6 +5251,16 @@
 			(type default)
 		)
 		(uuid "73573a66-ce53-4939-9612-044dd474a4c5")
+	)
+	(wire
+		(pts
+			(xy 336.55 151.13) (xy 336.55 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "748f4195-55c6-4e37-96a0-bfc985c0d68f")
 	)
 	(wire
 		(pts
@@ -5012,6 +5434,16 @@
 	)
 	(wire
 		(pts
+			(xy 336.55 149.86) (xy 336.55 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18735d6-ad4a-4afa-a711-e7004e74dfeb")
+	)
+	(wire
+		(pts
 			(xy 57.15 49.53) (xy 58.42 49.53)
 		)
 		(stroke
@@ -5082,6 +5514,16 @@
 	)
 	(wire
 		(pts
+			(xy 326.39 149.86) (xy 326.39 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2bbbb99-e93e-4ec4-8712-63d8c24e9ad4")
+	)
+	(wire
+		(pts
 			(xy 154.94 201.93) (xy 160.02 201.93)
 		)
 		(stroke
@@ -5122,6 +5564,16 @@
 	)
 	(wire
 		(pts
+			(xy 314.96 162.56) (xy 313.69 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcf0fc02-8c22-40be-bf3c-fd6ed1ed6a87")
+	)
+	(wire
+		(pts
 			(xy 167.64 153.67) (xy 167.64 154.94)
 		)
 		(stroke
@@ -5139,6 +5591,16 @@
 			(type default)
 		)
 		(uuid "bfec448e-0f44-4738-8044-cd5388be1c94")
+	)
+	(wire
+		(pts
+			(xy 313.69 162.56) (xy 313.69 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4f5020c-f6b2-4640-bcc4-ba464e3aab8e")
 	)
 	(wire
 		(pts
@@ -5172,6 +5634,16 @@
 	)
 	(wire
 		(pts
+			(xy 326.39 151.13) (xy 336.55 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7f5d0d4-5980-4506-a2a3-801b23b2930f")
+	)
+	(wire
+		(pts
 			(xy 58.42 54.61) (xy 59.69 54.61)
 		)
 		(stroke
@@ -5202,6 +5674,16 @@
 	)
 	(wire
 		(pts
+			(xy 331.47 139.7) (xy 331.47 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbdbb31c-14b8-42c3-a93d-fd99c5af297c")
+	)
+	(wire
+		(pts
 			(xy 232.41 54.61) (xy 238.76 54.61)
 		)
 		(stroke
@@ -5229,6 +5711,16 @@
 			(type default)
 		)
 		(uuid "cf0d7210-f0e0-4c6a-bcef-9c8427fe4db0")
+	)
+	(wire
+		(pts
+			(xy 326.39 142.24) (xy 326.39 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1b803ab-e6d4-4877-a4e0-13a7498b69bf")
 	)
 	(wire
 		(pts
@@ -5272,6 +5764,16 @@
 	)
 	(wire
 		(pts
+			(xy 326.39 160.02) (xy 326.39 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d90e0dea-98de-4834-b9ba-a90c8aa22886")
+	)
+	(wire
+		(pts
 			(xy 186.69 53.34) (xy 187.96 53.34)
 		)
 		(stroke
@@ -5279,6 +5781,16 @@
 			(type default)
 		)
 		(uuid "d993d47d-71dd-4241-9d7f-7d651f981593")
+	)
+	(wire
+		(pts
+			(xy 336.55 160.02) (xy 336.55 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc0caf0e-5dec-49b5-8cd6-28ab83827fa2")
 	)
 	(wire
 		(pts
@@ -5299,6 +5811,16 @@
 			(type default)
 		)
 		(uuid "df7c442d-ef22-4083-a0f2-33c6390a4c9d")
+	)
+	(wire
+		(pts
+			(xy 331.47 140.97) (xy 336.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e11c8faa-0aaa-4607-9927-d9fd7fc81538")
 	)
 	(wire
 		(pts
@@ -5379,6 +5901,16 @@
 			(type default)
 		)
 		(uuid "ed2661bb-7d79-4f1e-afa6-9392bdf6f108")
+	)
+	(wire
+		(pts
+			(xy 326.39 140.97) (xy 331.47 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0eacf31-fd36-4f34-81a6-702fc2860921")
 	)
 	(wire
 		(pts
@@ -5760,6 +6292,16 @@
 		)
 		(uuid "ebeaf622-ca98-44b4-8aa6-6f357b49d226")
 	)
+	(label "328_RESET"
+		(at 323.85 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eecd9dff-6b44-4410-9113-41eebde36b45")
+	)
 	(label "D+"
 		(at 71.12 54.61 0)
 		(effects
@@ -6016,6 +6558,88 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 336.55 146.05 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "173f8056-7803-42da-b158-49ab00d2d061")
+		(property "Reference" "D4"
+			(at 339.09 144.4624 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MBR0540T3G"
+			(at 339.09 147.0024 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 336.55 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 336.55 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8f8473d4-da43-490d-9d0f-65be2273a825")
+		)
+		(pin "2"
+			(uuid "bb572859-4a1d-4976-8ecd-9ef130b47ab6")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -6768,6 +7392,84 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 331.47 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38a60b88-6218-435e-9199-088c685cb51a")
+		(property "Reference" "#PWR028"
+			(at 331.47 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 331.47 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 331.47 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 331.47 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 331.47 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e10a690-9cbf-4dbe-a47f-c8688cb5b18b")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -8003,6 +8705,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 313.69 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7715700c-a4a8-4140-8bc4-64552dccb510")
+		(property "Reference" "#PWR029"
+			(at 313.69 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 313.69 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 313.69 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 313.69 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 313.69 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1a03ef1-a83e-4f34-8cc0-ba8708103d1c")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 82.55 36.83 90)
 		(unit 1)
@@ -8837,6 +9617,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 326.39 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2b69df2-50b4-48da-bd8f-07b7f65487cb")
+		(property "Reference" "R8"
+			(at 328.93 144.7799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 328.93 147.3199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 324.612 146.05 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 326.39 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 326.39 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6ab6b5ad-d75d-445a-a633-dc119f6e1b9a")
+		)
+		(pin "1"
+			(uuid "90322b7a-fb6c-4346-86df-9f23459538dd")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "MCU_Microchip_ATmega:ATmega328P-P")
 		(at 190.5 175.26 0)
 		(unit 1)
@@ -9603,6 +10465,88 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 336.55 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be2c0e46-d3b1-4cd4-8106-baf7f1196eea")
+		(property "Reference" "C13"
+			(at 340.36 154.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 340.36 157.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 337.5152 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 336.55 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03709c22-90bb-4e96-852c-a5462f29658d")
+		)
+		(pin "2"
+			(uuid "6ea9ac70-a876-451f-8b10-71ea933fa58b")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 226.06 33.02 0)
 		(unit 1)
 		(body_style 1)
@@ -9912,6 +10856,84 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 336.55 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd3a4ec6-d0ea-42cf-a381-5015db11d0dd")
+		(property "Reference" "#PWR030"
+			(at 336.55 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 336.55 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 336.55 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 336.55 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "381fa9d6-e3a1-4bb3-b027-a9f79082e25c")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -10310,6 +11332,88 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 326.39 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e4d45771-5f40-4d57-8a5a-9efb3d2318d0")
+		(property "Reference" "R9"
+			(at 328.93 154.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330R"
+			(at 328.93 157.4799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 324.612 156.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 326.39 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 326.39 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b64b601d-dc49-4291-8007-4afd17eb981e")
+		)
+		(pin "1"
+			(uuid "76a9ce86-b7c1-444e-a1bc-23c691ee1f2c")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -10731,6 +11835,86 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 320.04 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f68641ac-f1fa-4552-b92e-38de95b5da5d")
+		(property "Reference" "SW1"
+			(at 320.04 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RESET"
+			(at 320.04 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 320.04 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 320.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "646775f5-075a-421c-a455-817e3bc75c66")
+		)
+		(pin "2"
+			(uuid "edb8c6aa-846c-41be-8a81-54a18ad36ca8")
+		)
+		(instances
+			(project "atmega328_dic_board"
+				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
