@@ -4744,7 +4744,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 187.96) (xy 207.01 187.96)
+			(xy 205.74 190.5) (xy 207.01 190.5)
 		)
 		(stroke
 			(width 0)
@@ -4964,7 +4964,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 193.04) (xy 207.01 193.04)
+			(xy 205.74 187.96) (xy 207.01 187.96)
 		)
 		(stroke
 			(width 0)
@@ -6013,7 +6013,7 @@
 		(uuid "2a9d3dea-ce7e-4d0c-843d-c8b6f2cbcabf")
 	)
 	(label "TX_BRIDGE"
-		(at 207.01 193.04 0)
+		(at 207.01 187.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6243,7 +6243,7 @@
 		(uuid "b6a1eacf-ffc4-4722-b018-4398a3b09c75")
 	)
 	(label "RX_BRIDGE"
-		(at 207.01 187.96 0)
+		(at 207.01 190.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
