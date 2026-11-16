@@ -5356,7 +5356,7 @@
 		)
 		(uuid "a30e23a7-9ff7-4581-85d6-8647c63b169c")
 	)
-	(text "measurment circuit"
+	(text "measurement circuit"
 		(exclude_from_sim no)
 		(at 138.176 146.304 0)
 		(effects
@@ -8128,7 +8128,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01fc3346-5a41-4821-bebf-ce1e672a11ca")
-		(property "Reference" "R11"
+		(property "Reference" "R9"
 			(at 223.52 100.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8192,7 +8192,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R11")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -8210,7 +8210,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03ae9e5a-2f38-4d98-a6c4-32adf0f9ce26")
-		(property "Reference" "C9"
+		(property "Reference" "C2"
 			(at 34.29 146.05 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8272,7 +8272,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C9")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -8290,7 +8290,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "052e74ff-7134-4454-87eb-582ff5672384")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR09"
 			(at 68.58 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -8350,7 +8350,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR033")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -8449,7 +8449,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "114749ef-da02-4075-ba7e-dd017f26692f")
-		(property "Reference" "J10"
+		(property "Reference" "J7"
 			(at 157.48 93.472 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8508,7 +8508,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J10")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -8687,7 +8687,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17c04411-50ae-47fa-aac0-192233b0f3b5")
-		(property "Reference" "C6"
+		(property "Reference" "C12"
 			(at 181.61 22.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8751,7 +8751,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C6")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -8769,7 +8769,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "180b50f7-5fe5-49a4-b2a2-a31cd5368601")
-		(property "Reference" "R7"
+		(property "Reference" "R8"
 			(at 181.61 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8833,7 +8833,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R7")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -8851,7 +8851,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22d98e29-e37e-479c-ab56-1f75d952eb65")
-		(property "Reference" "J4"
+		(property "Reference" "J10"
 			(at 165.1 128.9049 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8912,7 +8912,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J4")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -8930,7 +8930,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22e8589e-1444-48e8-891e-6c72d1b99e28")
-		(property "Reference" "R10"
+		(property "Reference" "R6"
 			(at 166.37 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8994,7 +8994,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R10")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -9012,7 +9012,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c34feac-38f2-4cf5-9061-d9ae659a5b2f")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR011"
 			(at 83.82 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9072,7 +9072,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR05")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9090,7 +9090,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2d2d1d83-bb81-4d4a-80c4-9c4aab33c9e1")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR028"
 			(at 204.47 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -9150,7 +9150,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR027")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -9168,7 +9168,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2daee867-a5f9-49be-af0e-09808255386e")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR034"
 			(at 256.54 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -9228,7 +9228,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR035")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -9246,7 +9246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f6a5d50-a4ce-4b36-894f-fd93247b2430")
-		(property "Reference" "J3"
+		(property "Reference" "J11"
 			(at 165.1 135.2549 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9307,7 +9307,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J3")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -9325,7 +9325,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f83ce79-8c8d-4b9d-8d17-9f3e23aa8d57")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR019"
 			(at 118.11 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9385,7 +9385,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR011")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -9403,7 +9403,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33031d08-4891-48df-b4c4-af175850018d")
-		(property "Reference" "JP1"
+		(property "Reference" "JP4"
 			(at 214.63 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9490,7 +9490,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "JP1")
+					(reference "JP4")
 					(unit 1)
 				)
 			)
@@ -9601,7 +9601,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35cc5a14-e88f-44ec-bd78-a73bc09d8732")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG03"
 			(at 86.36 24.765 0)
 			(hide yes)
 			(show_name no)
@@ -9661,7 +9661,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#FLG02")
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -9679,7 +9679,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3759a1a2-91f7-41cc-8bed-37d84fb48a24")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR04"
 			(at 38.1 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -9739,7 +9739,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR022")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -9757,7 +9757,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38a60b88-6218-435e-9199-088c685cb51a")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR032"
 			(at 255.27 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -9817,7 +9817,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR028")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -9835,7 +9835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39568839-8e65-4886-b89f-f0ca1778e8e1")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR05"
 			(at 39.37 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -9895,7 +9895,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR021")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -9913,7 +9913,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c50daf3-0d6a-465b-b169-5cc6631bfcb0")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR029"
 			(at 214.63 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9973,7 +9973,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR025")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -10071,7 +10071,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "406efa12-6ad7-4d53-aff4-2980572335f9")
-		(property "Reference" "J9"
+		(property "Reference" "J3"
 			(at 137.668 93.472 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10132,7 +10132,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J9")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -10228,7 +10228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41b12107-e687-4856-b29b-03aa39077b4c")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR030"
 			(at 214.63 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -10288,7 +10288,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR032")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -10388,7 +10388,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "42cb8b6c-141e-4aed-afec-2d614b6c095f")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR023"
 			(at 154.94 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -10448,7 +10448,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR015")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -10466,7 +10466,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "475f9ae9-260a-4b39-9dbb-439cb1051deb")
-		(property "Reference" "C4"
+		(property "Reference" "C10"
 			(at 158.75 22.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10530,7 +10530,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C4")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10548,7 +10548,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49e62686-46a9-4461-aae0-88841199b152")
-		(property "Reference" "C8"
+		(property "Reference" "C1"
 			(at 26.67 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10612,7 +10612,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C8")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -10630,7 +10630,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c7aeda0-a17b-4d28-842a-5e7758437186")
-		(property "Reference" "JP4"
+		(property "Reference" "JP5"
 			(at 220.98 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10717,7 +10717,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "JP4")
+					(reference "JP5")
 					(unit 1)
 				)
 			)
@@ -10854,7 +10854,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5334cdbc-2390-490c-a336-372bb145d7c3")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR08"
 			(at 60.96 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -10914,7 +10914,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR019")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -10932,7 +10932,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "549eb257-5825-44d1-80f1-212e49ba0168")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR017"
 			(at 104.14 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -10992,7 +10992,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR024")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -11010,7 +11010,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5836cc6b-f8c3-47c5-b3d0-f761bdcc9d38")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR020"
 			(at 118.11 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -11070,7 +11070,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR012")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -11087,7 +11087,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5906896b-47b6-4a83-b215-735161af4838")
-		(property "Reference" "C12"
+		(property "Reference" "C6"
 			(at 86.36 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11151,7 +11151,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C12")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -11169,7 +11169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d826b5d-89c5-4d15-9398-58cbaa683e42")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR014"
 			(at 99.06 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -11229,7 +11229,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR07")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -11247,7 +11247,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60feb2ab-6dbd-4ccc-8695-ef580f513bc4")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR025"
 			(at 166.37 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -11307,7 +11307,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR016")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -11324,7 +11324,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "639c3c3b-40e2-4c88-9065-f33bede36d98")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 156.21 102.362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11383,7 +11383,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -11476,7 +11476,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6edb3244-14f5-4a8b-9969-40ca6c1c8c9c")
-		(property "Reference" "J12"
+		(property "Reference" "J6"
 			(at 157.48 84.582 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11535,7 +11535,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J12")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -11553,7 +11553,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "754fc3f3-ed33-4abc-a327-475d3af62fe2")
-		(property "Reference" "JP3"
+		(property "Reference" "JP1"
 			(at 130.81 123.1899 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11642,7 +11642,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "JP3")
+					(reference "JP1")
 					(unit 1)
 				)
 			)
@@ -11765,7 +11765,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7715700c-a4a8-4140-8bc4-64552dccb510")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR031"
 			(at 237.49 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -11825,7 +11825,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR029")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -11923,7 +11923,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "777dba7d-e8c2-4d53-b634-5aaec500f9db")
-		(property "Reference" "C11"
+		(property "Reference" "C8"
 			(at 107.95 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11987,7 +11987,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C11")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -12005,7 +12005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a9734e2-6053-480b-a961-5837784d1873")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR010"
 			(at 69.85 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -12065,7 +12065,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR04")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -12083,7 +12083,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b11e733-bc23-4e7f-9a24-405f55790b78")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR024"
 			(at 163.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -12143,7 +12143,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR031")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -12161,7 +12161,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c4f05ed-f8eb-4d11-b0dc-8eed846fc7bd")
-		(property "Reference" "J2"
+		(property "Reference" "J12"
 			(at 208.28 41.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12249,7 +12249,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J2")
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -12267,7 +12267,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7debc327-447c-46bf-8afd-d38090f25287")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR06"
 			(at 54.61 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -12327,7 +12327,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR02")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -12345,7 +12345,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "87a21f79-8b4c-46db-8eeb-f469a72eb6e3")
-		(property "Reference" "#FLG03"
+		(property "Reference" "#FLG04"
 			(at 207.645 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -12406,7 +12406,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#FLG03")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -12504,7 +12504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92222f4f-c19f-448d-8a70-bca97a840f08")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR022"
 			(at 138.43 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -12564,7 +12564,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR014")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -12582,7 +12582,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96603d8b-3ffb-4f01-8d55-16efc0dadb24")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR07"
 			(at 60.96 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -12642,7 +12642,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -12836,7 +12836,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1597bf7-a791-472e-ae42-90713c5dc79e")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR02"
 			(at 29.21 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -12896,7 +12896,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR026")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -12990,7 +12990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2b69df2-50b4-48da-bd8f-07b7f65487cb")
-		(property "Reference" "R8"
+		(property "Reference" "R11"
 			(at 252.73 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13054,7 +13054,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R8")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -13072,7 +13072,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3a9f019-dc02-4630-b375-d9eae415838c")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 39.37 90.0998 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13213,7 +13213,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -13231,7 +13231,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6cc3ab2-e2ef-4afe-95cc-529662caa5e7")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR015"
 			(at 99.06 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -13291,7 +13291,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR08")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -13309,7 +13309,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6d12835-69d1-4758-a2df-7a2926b48f82")
-		(property "Reference" "C2"
+		(property "Reference" "C7"
 			(at 102.87 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13373,7 +13373,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C2")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -13391,7 +13391,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8bac504-51d2-456c-9c4b-d022a35b07c5")
-		(property "Reference" "C3"
+		(property "Reference" "C9"
 			(at 121.92 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13455,7 +13455,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C3")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -13555,7 +13555,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab311ac7-8028-4f8b-8ee8-02566920c587")
-		(property "Reference" "C14"
+		(property "Reference" "C13"
 			(at 212.09 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13619,7 +13619,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C14")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -13713,7 +13713,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b37458b3-7604-49e1-85c1-d4a023f535da")
-		(property "Reference" "C1"
+		(property "Reference" "C5"
 			(at 90.17 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13777,7 +13777,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C1")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -13795,7 +13795,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b389cb4d-e036-4d50-ad9f-56c8d91e2172")
-		(property "Reference" "C10"
+		(property "Reference" "C4"
 			(at 41.91 100.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13859,7 +13859,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C10")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -13877,7 +13877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b67f7eb5-4252-4a72-bccc-50a8e1d07550")
-		(property "Reference" "U2"
+		(property "Reference" "U3"
 			(at 140.5733 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13977,7 +13977,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "U2")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -13995,7 +13995,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be2c0e46-d3b1-4cd4-8106-baf7f1196eea")
-		(property "Reference" "C13"
+		(property "Reference" "C14"
 			(at 264.16 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14059,7 +14059,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C13")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -14077,7 +14077,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be35fdfa-d770-40c1-b235-03c1eb7cf0f4")
-		(property "Reference" "C5"
+		(property "Reference" "C11"
 			(at 170.18 22.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14141,7 +14141,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C5")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -14158,7 +14158,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf05977a-2623-4233-8571-3c68661164fc")
-		(property "Reference" "J11"
+		(property "Reference" "J2"
 			(at 137.668 84.582 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14219,7 +14219,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J11")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -14237,7 +14237,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1ccc689-f1c9-408c-b9ec-a5a0c8dc4f48")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR026"
 			(at 172.72 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -14297,7 +14297,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR017")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -14315,7 +14315,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c43740a4-11df-4b0d-93cf-4d65fe7c2987")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR012"
 			(at 86.36 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -14375,7 +14375,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR06")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -14393,7 +14393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c60299ff-0cee-4613-9e3c-7a08887ea132")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR018"
 			(at 118.11 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -14453,7 +14453,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR010")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -14470,7 +14470,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb1a506f-c658-4a85-ae54-b85cfe2496b6")
-		(property "Reference" "J8"
+		(property "Reference" "J4"
 			(at 139.192 102.362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14531,7 +14531,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J8")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -14549,7 +14549,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd3a4ec6-d0ea-42cf-a381-5015db11d0dd")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR035"
 			(at 260.35 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -14609,7 +14609,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR030")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -14627,7 +14627,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d03f6eb3-3b75-4176-8312-c5052908b91e")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR021"
 			(at 138.43 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -14687,7 +14687,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR013")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -14705,7 +14705,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2337a7f-8f6c-4cc9-afa7-e158009bd0f3")
-		(property "Reference" "JP5"
+		(property "Reference" "JP3"
 			(at 177.8 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14794,7 +14794,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "JP5")
+					(reference "JP3")
 					(unit 1)
 				)
 			)
@@ -14812,7 +14812,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d7482e97-7efd-4bd9-803f-9598fc172de5")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR033"
 			(at 256.54 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -14872,7 +14872,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR034")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -14969,7 +14969,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7fa6880-04b8-423c-b5b8-eca5f61a375d")
-		(property "Reference" "J6"
+		(property "Reference" "J5"
 			(at 139.192 118.872 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15030,7 +15030,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -15048,7 +15048,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da26fa26-658a-4f57-b460-6db4c91c0ec7")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG02"
 			(at 71.755 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -15109,7 +15109,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#FLG04")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -15127,7 +15127,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db984ddf-6046-480b-8cbf-f2a49d0a67e7")
-		(property "Reference" "R12"
+		(property "Reference" "R10"
 			(at 223.52 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15191,7 +15191,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R12")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -15289,7 +15289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dce4a351-9b32-4699-a19a-2daef4dab943")
-		(property "Reference" "R6"
+		(property "Reference" "R7"
 			(at 168.91 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15353,7 +15353,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R6")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -15371,7 +15371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd67f8a0-38a9-4258-94ff-cadba74bf798")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR016"
 			(at 104.14 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -15431,7 +15431,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR09")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -15448,7 +15448,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e25e5cf6-bb09-4db1-bc0d-e795489327d0")
-		(property "Reference" "J5"
+		(property "Reference" "J9"
 			(at 155.702 118.872 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15507,7 +15507,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "J5")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -15525,7 +15525,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e4d45771-5f40-4d57-8a5a-9efb3d2318d0")
-		(property "Reference" "R9"
+		(property "Reference" "R12"
 			(at 252.73 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15589,7 +15589,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "R9")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -15607,7 +15607,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec23902a-bcf7-421e-97ce-d12671f5e23e")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR027"
 			(at 177.8 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -15667,7 +15667,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR018")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -15944,7 +15944,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f30a5012-9faa-43ea-9f37-27557ba6d67f")
-		(property "Reference" "C7"
+		(property "Reference" "C3"
 			(at 39.37 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16008,7 +16008,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C7")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -16026,7 +16026,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3ca7900-9c26-49f9-9a9c-28d9cbd9c7ed")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR03"
 			(at 29.21 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -16086,7 +16086,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR020")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -16272,7 +16272,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbb36e91-c246-47a4-b4cf-c0261212fabb")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR013"
 			(at 93.98 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -16332,7 +16332,7 @@
 		(instances
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR023")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
