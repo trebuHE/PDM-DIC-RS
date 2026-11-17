@@ -16,3 +16,6 @@ gerbers/
 *.drl
 *.gbr
 *-drl_map.pdf
+
+*.csv
+*.ods
