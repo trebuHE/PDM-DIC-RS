@@ -12299,7 +12299,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_HC49-SD_HandSoldering"
+		(property "Footprint" "Crystal:Crystal_SMD_HC49-SD"
 			(at 99.06 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -12615,7 +12615,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-28_W7.62mm"
+		(property "Footprint" "Package_DIP:DIP-28_W7.62mm_Socket"
 			(at 60.96 127 0)
 			(hide yes)
 			(show_name no)
