@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ATmega 328P RC DIC")
-		(date "2026-11-17")
-		(rev "2.0")
+		(date "2026-11-18")
+		(rev "3.0")
 		(company "Hubert Mucha, Politechnika Gdańska")
 	)
 	(lib_symbols
@@ -6209,16 +6209,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 50.8) (xy 118.11 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c9029d8-fe3b-4c8a-9aeb-90e60be5f91a")
-	)
-	(wire
-		(pts
 			(xy 215.9 92.71) (xy 212.09 92.71)
 		)
 		(stroke
@@ -6936,16 +6926,6 @@
 			(type default)
 		)
 		(uuid "d591a0d9-2348-42aa-9cfc-cc5006f53e16")
-	)
-	(wire
-		(pts
-			(xy 118.11 59.69) (xy 118.11 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7b2fc93-c55a-4054-9b2e-ebbc6ce914e0")
 	)
 	(wire
 		(pts
@@ -8917,84 +8897,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 118.11 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f83ce79-8c8d-4b9d-8d17-9f3e23aa8d57")
-		(property "Reference" "#PWR019"
-			(at 118.11 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 118.11 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 118.11 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6f469568-393b-479d-8195-a69b94d4d051")
-		)
-		(instances
-			(project "atmega328_dic_board"
-				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 163.83 142.24 0)
 		(unit 1)
@@ -10596,84 +10498,6 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 118.11 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5836cc6b-f8c3-47c5-b3d0-f761bdcc9d38")
-		(property "Reference" "#PWR020"
-			(at 118.11 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 118.11 66.04 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 118.11 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8eadb68c-0e7f-437b-ae34-7b3e0d4d8f8e")
-		)
-		(instances
-			(project "atmega328_dic_board"
-				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -12897,88 +12721,6 @@
 			(project "atmega328_dic_board"
 				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
 					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 118.11 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a8bac504-51d2-456c-9c4b-d022a35b07c5")
-		(property "Reference" "C9"
-			(at 121.92 54.6099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 121.92 57.1499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 119.0752 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 118.11 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "49dc6ed2-8027-48cc-93bb-e55c7549b7f0")
-		)
-		(pin "1"
-			(uuid "ea80864d-8262-439e-8e65-9e737f8f17b6")
-		)
-		(instances
-			(project "atmega328_dic_board"
-				(path "/032074fe-64bc-4981-b17a-2ff99c40cf9b"
-					(reference "C9")
 					(unit 1)
 				)
 			)
